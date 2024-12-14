@@ -32,6 +32,7 @@ public class SlotMachine : MonoBehaviour
     {
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _defaultMaterial = _renderer.material;
+        _selectedMaterial.SetTexture("_EmissiveTex", _defaultMaterial.mainTexture);
     }
 
     private void Update()

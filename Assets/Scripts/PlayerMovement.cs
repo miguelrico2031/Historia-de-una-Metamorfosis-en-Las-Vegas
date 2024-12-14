@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Handletransforms()
     {
-        float angle = _activeSpriteTransform is null ? 0f : _activeSpriteTransform.eulerAngles.z;
+        float angle = _activeSpriteTransform is null ? 180f : _activeSpriteTransform.eulerAngles.z;
         _activeSpriteTransform = _activeAnimator.transform;
         _activeSpriteTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
