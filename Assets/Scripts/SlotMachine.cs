@@ -30,7 +30,7 @@ public class SlotMachine : MonoBehaviour
 
     private void Awake()
     {
-        _renderer = GetComponent<SpriteRenderer>();
+        _renderer = GetComponentInChildren<SpriteRenderer>();
         _defaultMaterial = _renderer.material;
     }
 

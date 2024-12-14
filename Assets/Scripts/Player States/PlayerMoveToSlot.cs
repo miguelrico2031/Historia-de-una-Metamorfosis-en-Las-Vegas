@@ -25,8 +25,8 @@ public class PlayerMoveToSlot : APlayerState
         if (!_movement.HasReachedTarget()) return;
         
         //estado de ponerse en tragaperras
-        //de momento idle
         _movement.CancelMovement();
+        _movement.LookAt(_slot.transform);
         _controller.SetState(new PlayerAwaitJackpot(_slot, _controller));
     }
     public override void Exit(APlayerState nextState = null) {}
