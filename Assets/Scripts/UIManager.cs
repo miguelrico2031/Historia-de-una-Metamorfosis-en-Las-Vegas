@@ -15,11 +15,14 @@ public class UIManager : MonoBehaviour
     [Header("Money")]
     [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private int _digits = 18;
+    [SerializeField]private float _metCooldownButtonDuration = 6f;
 
     [Header("Metamorphose")] [SerializeField]
     private Button _metamorphoseButton;
     
     private ulong _money = 0;
+    private float _metButtonCooldownTimer;
+    private bool _isMet;
     private void Awake()
     {
         if (Instance is not null)
@@ -30,6 +33,17 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    private void Update()
+    {
+        if (!_isMet) return;
+        _metButtonCooldownTimer -= Time.deltaTime;
+        _metamorphoseButton.GetComponent<Image>().fillAmount = 
+            Mathf.Clamp01(Mathf.Lerp(1f, 0f, _metButtonCooldownTimer / _metCooldownButtonDuration));
+        if (_metButtonCooldownTimer > 0f) return;
+        _metamorphoseButton.enabled = true;
+        _isMet = false;
     }
 
     private void Start()
@@ -51,14 +65,13 @@ public class UIManager : MonoBehaviour
         var pm = FindObjectOfType<PlayerMetamorphose>();
         pm.Metamorphose();
         _metamorphoseButton.enabled = false;
-        StartCoroutine(WaitAndEnableButton(pm));
+        _metamorphoseButton.GetComponent<Image>().fillAmount = 0f;
+
+        _metButtonCooldownTimer = _metCooldownButtonDuration;
+        _isMet = true;
     }
 
-    private IEnumerator WaitAndEnableButton(PlayerMetamorphose pm)
-    {
-        yield return new WaitForSeconds(pm.MetamorphoseDuration);
-        _metamorphoseButton.enabled = true;
-    }
+
     
     
     

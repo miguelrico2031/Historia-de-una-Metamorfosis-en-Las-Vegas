@@ -21,6 +21,7 @@ public class SlotMachine : MonoBehaviour
     [SerializeField] private float _cooldown;
     [SerializeField] private float _minSpinTime, _maxSpinTime;
     [SerializeField] private ulong _jackpotMoney;
+    [SerializeField] private AudioClip _slotSound, _jackpotSound;
 
     private SpriteRenderer _renderer;
     private Material _defaultMaterial;
@@ -116,12 +117,13 @@ public class SlotMachine : MonoBehaviour
     {
         CurrentState = State.Spinning;
         _spinTimer = Random.Range(_minSpinTime, _maxSpinTime);
+        AudioManager.Instance.PlaySound(_slotSound);
     }
 
     public ulong CollectJackpot()
     {
         HasJackpot = false;
-
+        AudioManager.Instance.PlaySound(_jackpotSound);
         return _jackpotMoney;
     }
 }
