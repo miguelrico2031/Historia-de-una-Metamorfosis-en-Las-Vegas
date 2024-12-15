@@ -13,8 +13,9 @@ public class PlayerMoveToSlot : APlayerState
     {
         _movement = _controller.GetComponent<PlayerMovement>();
         _movement.CancelMovement();
-        _movement.SetTarget(_slot.GetClosestTarget(_controller.transform.position));
-        // _slot.Disable();
+        var target = _slot.GetClosestTarget(_controller.transform.position);
+        _slot.PlayerTarget(target);
+        _movement.SetTarget(target);
     }
 
     public override void Update(float deltaTime)

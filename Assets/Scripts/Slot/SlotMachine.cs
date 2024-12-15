@@ -118,11 +118,13 @@ public class SlotMachine : MonoBehaviour
                 closest = target;
             }
         }
-
-        CurrentState = State.Targetted;
-
-        _selectedTarget = closest;
         return closest;
+    }
+
+    public void PlayerTarget(Transform selectedTarget)
+    {
+        _selectedTarget = selectedTarget;
+        CurrentState = State.Targetted;
     }
 
     public void StartSpinning()

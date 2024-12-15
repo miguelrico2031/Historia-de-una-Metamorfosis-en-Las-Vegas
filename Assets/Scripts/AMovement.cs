@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public abstract class AMovement : MonoBehaviour
 {
+    [SerializeField] private float _rotationSpeed;
     protected Animator _activeAnimator;
     protected Transform _activeSpriteTransform;
     protected NavMeshAgent _agent;
@@ -24,16 +25,33 @@ public abstract class AMovement : MonoBehaviour
 
             if (!_agent.isStopped)
             {
-                var angle = Vector3.SignedAngle(_activeSpriteTransform.up, _agent.velocity, Vector3.forward);
-                _activeSpriteTransform.Rotate(0f, 0f, angle);
+                // var angle = Vector3.SignedAngle(_activeSpriteTransform.up, _agent.velocity, Vector3.forward);
+                // _activeSpriteTransform.Rotate(0f, 0f, angle);
+                RotateTowards(_agent.velocity);
             }
         }
+    }
+
+    public void RotateTowards(Vector2 direction)
+    {
+        if (direction == Vector2.zero) return; // Evita errores si la dirección es (0, 0)
+
+        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Restamos 90° para alinear el "up"
+        float currentAngle = _activeSpriteTransform.eulerAngles.z;
+        float newAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, _rotationSpeed * Time.deltaTime);
+        _activeSpriteTransform.rotation = Quaternion.Euler(0f, 0f, newAngle);
     }
     
     public void SetTarget(Transform target)
     {
         _agent.isStopped = false;
         _agent.SetDestination(target.position);
+    }
+
+    public void SetTarget(Vector3 position)
+    {
+        _agent.isStopped = false;
+        _agent.SetDestination(position);
     }
     
     public bool HasReachedTarget()
