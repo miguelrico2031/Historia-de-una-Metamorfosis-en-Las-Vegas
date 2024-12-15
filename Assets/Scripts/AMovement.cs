@@ -58,8 +58,18 @@ public abstract class AMovement : MonoBehaviour
     public void LookAt(Transform target)
     {
         if (!_agent.isStopped) return;
+
         var direction = target.position - _activeSpriteTransform.position;
-        var angle = Vector3.SignedAngle(_activeSpriteTransform.up, direction.normalized, Vector3.forward);
-        _activeSpriteTransform.Rotate(0f, 0f, angle);
-    }    
+        LookAt(direction);
+    }
+
+    public void LookAt(Vector3 direction)
+    {
+        if (!_agent.isStopped) return;
+        
+        direction.z = 0f;
+        direction.Normalize();
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Ajustar por transform.up
+        _activeSpriteTransform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
 }

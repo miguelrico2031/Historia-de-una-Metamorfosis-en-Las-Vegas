@@ -13,18 +13,20 @@ public class UIManager : MonoBehaviour
 
     [Header("Money")] [SerializeField] private TextMeshProUGUI _moneyText;
     [SerializeField] private int _digits = 18;
-    [SerializeField] private float _metCooldownButtonDuration = 6f;
+    [SerializeField] private float _moneySpeed;
 
     [Header("Metamorphose")] [SerializeField]
     private Button _metamorphoseButton;
     [SerializeField] private Slider _metDurationSlider;
+    [SerializeField] private float _metCooldownButtonDuration = 6f;
 
     private ulong _money = 0;
     private ulong _displayedMoney = 0;
     private float _metButtonCooldownTimer;
     private float _metDurationTimer;
     private bool _isMet;
-
+    private float _moneyDelayPeriod;
+    private float _moneyTimer;
 
     private void Awake()
     {
@@ -36,6 +38,9 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        _moneyDelayPeriod = 1f / _moneySpeed;
+        _moneyTimer = _moneyDelayPeriod;
     }
 
     private void Update()
@@ -51,10 +56,16 @@ public class UIManager : MonoBehaviour
             _metamorphoseButton.enabled = true;
             _isMet = false;
         }
+
         if (_money > _displayedMoney)
         {
-            _displayedMoney += 100;
-            UpdateMoney();
+            _moneyTimer -= Time.deltaTime;
+            if(_moneyTimer <= 0f)
+            {
+                _moneyTimer = _moneyDelayPeriod;
+                _displayedMoney += 100;
+                UpdateMoney();
+            }
         }
     }
 

@@ -9,7 +9,7 @@ public class PlayerMovement : AMovement
 
     private float _defaultSpeed;
     protected override void Awake()
-    {
+    {    
         base.Awake();
         _defaultSpeed = _agent.speed;
         SetHuman();

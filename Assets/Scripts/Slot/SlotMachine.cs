@@ -21,7 +21,7 @@ public class SlotMachine : MonoBehaviour
     [SerializeField] private Material _disabledMaterial;
     [SerializeField] private float _cooldown;
     [SerializeField] private float _minSpinTime, _maxSpinTime;
-    [SerializeField] private ulong _jackpotMoney;
+    [SerializeField] private ulong _minJackpotMoney, _maxjackpotMoney;
     [SerializeField] private AudioClip _slotSound, _jackpotSound;
 
     private SpriteRenderer _renderer;
@@ -140,7 +140,11 @@ public class SlotMachine : MonoBehaviour
         HasJackpot = false;
         AudioManager.Instance.PlaySound(_jackpotSound);
         PlayParticles();
-        return _jackpotMoney;
+        
+        var rand = Random.Range(_minJackpotMoney, _maxjackpotMoney);
+        rand -= rand % 100;
+        Debug.Log($"jackpot: {rand}");
+        return (ulong) rand;
     }
 
     private void PlayParticles()

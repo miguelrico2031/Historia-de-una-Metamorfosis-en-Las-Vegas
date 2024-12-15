@@ -5431,7 +5431,8 @@ MonoBehaviour:
   _cooldown: 15
   _minSpinTime: 3
   _maxSpinTime: 6
-  _jackpotMoney: 50000
+  _minJackpotMoney: 100000
+  _maxjackpotMoney: 200000
   _slotSound: {fileID: 8300000, guid: 4fe1052dd08fed0489b58119ccb29a55, type: 3}
   _jackpotSound: {fileID: 8300000, guid: 5def8e4fd48f5a64eb6ed358737e74ae, type: 3}
 --- !u!70 &6999213348088685259
