@@ -75,7 +75,7 @@ public class UIManager : MonoBehaviour
     {
         string paddedMoney = _displayedMoney.ToString($"D{_digits}");
 
-        _moneyText.text = "$" + FormatWithSpaces(paddedMoney);
+        _moneyText.text = FormatWithSpaces(paddedMoney);
     }
 
     public void PressMetamorphoseButton()
