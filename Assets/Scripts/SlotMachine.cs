@@ -59,9 +59,10 @@ public class SlotMachine : MonoBehaviour
                 if (_spinTimer <= 0f)
                 {
                     transform.rotation = Quaternion.identity;
-                    Disable();
                     HasJackpot = true;
                     _animator.Play("Jackpot");
+                    CurrentState = State.Disabled;
+                    _cooldownTimer = _cooldown;
                 }
                 
                 break;
@@ -91,11 +92,9 @@ public class SlotMachine : MonoBehaviour
         SlotMachineManager.Instance.RegisterSlotClick(this);
     }
     
-    public void Disable()
+    public void SetDisableGraphic()
     {
-        CurrentState = State.Disabled;
         _renderer.material = _disabledMaterial;
-        _cooldownTimer = _cooldown;
     }
     
     public Transform GetClosestTarget(Vector3 pos)
