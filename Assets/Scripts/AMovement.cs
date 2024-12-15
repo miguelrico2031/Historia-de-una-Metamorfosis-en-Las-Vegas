@@ -27,20 +27,12 @@ public abstract class AMovement : MonoBehaviour
             {
                 // var angle = Vector3.SignedAngle(_activeSpriteTransform.up, _agent.velocity, Vector3.forward);
                 // _activeSpriteTransform.Rotate(0f, 0f, angle);
-                RotateTowards(_agent.velocity);
+                LookTowards(_agent.velocity);
             }
         }
     }
 
-    public void RotateTowards(Vector2 direction)
-    {
-        if (direction == Vector2.zero) return; // Evita errores si la dirección es (0, 0)
 
-        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Restamos 90° para alinear el "up"
-        float currentAngle = _activeSpriteTransform.eulerAngles.z;
-        float newAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, _rotationSpeed * Time.deltaTime);
-        _activeSpriteTransform.rotation = Quaternion.Euler(0f, 0f, newAngle);
-    }
     
     public void SetTarget(Transform target)
     {
@@ -90,4 +82,18 @@ public abstract class AMovement : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Ajustar por transform.up
         _activeSpriteTransform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
+    
+    public void LookTowards(Vector2 direction)
+    {
+        if (direction == Vector2.zero) return; // Evita errores si la dirección es (0, 0)
+
+        float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Restamos 90° para alinear el "up"
+        float currentAngle = _activeSpriteTransform.eulerAngles.z;
+        float newAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, _rotationSpeed * Time.deltaTime);
+        _activeSpriteTransform.rotation = Quaternion.Euler(0f, 0f, newAngle);
+    }
+
+    public Vector3 GetDirectionTo(Vector3 target) => target - _activeSpriteTransform.position;
+
+
 }

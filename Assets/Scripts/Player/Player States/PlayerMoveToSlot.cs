@@ -27,7 +27,6 @@ public class PlayerMoveToSlot : APlayerState
         
         //estado de ponerse en tragaperras
         _movement.CancelMovement();
-        _movement.LookAt(_slot.transform);
         _controller.SetState(new PlayerAwaitJackpot(_slot, _controller));
     }
     public override void Exit(APlayerState nextState = null) {}
