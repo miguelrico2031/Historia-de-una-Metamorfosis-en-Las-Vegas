@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74ebe11367615814ebce37f5f0b2ae27
+guid: c219d7cbc2976ea41a89b8fe813708be
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,7 +123,511 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_0
+      name: slot-button_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356d75b4b034f454fb41da9cf8b0ae6b
+      internalID: 1133624472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 368
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078fcf62e5582c54a8f6d8b63e3e71a9
+      internalID: 974017551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 368
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e4be2d349145e4d9f5feaf6c287c9f
+      internalID: -1780419000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 368
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41709a6790adb98468ff3646e7010d2f
+      internalID: -560771555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 368
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecf172f2759443459e46565feabb630
+      internalID: 576228362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 368
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860bbeb4334456a4b9b7e09372246540
+      internalID: 871913971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415ccac54673b56478afa533f83b4ebc
+      internalID: -338619596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 276
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a239fb09200dfdd4bb454aa3bd80c0e4
+      internalID: 2125953540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_8
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 276
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af51bb598306a2040b26d20f5f222530
+      internalID: 691285759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 276
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e15f18f65adb84690b6d4085c4be7a
+      internalID: 3432511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 276
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee70904744f20f4482736d57702e312
+      internalID: 1833988576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_11
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 276
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdd7846560ddda4baa2b401ad4b0c45
+      internalID: -445240834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05805c8ad9597644badfd9920b1aef8e
+      internalID: 1230193834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 184
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f530cdeaa0c30429ccda5f25e213ca
+      internalID: -1299373576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 184
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85372ed3c67e39d449c28ff97cfdbad6
+      internalID: 1396351383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_15
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 184
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609ab45055d75054ea1d37fb88153065
+      internalID: -1733669451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_16
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 184
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59eec4f629be0034895bed2da167d3a1
+      internalID: -1067605463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_17
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 184
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cd1bc2f1306194d89bea96a372aeb6
+      internalID: 585250023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065a0e410d9e18641888610a586c66ad
+      internalID: 2109463864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_19
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 92
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8609c30d041544b9bf99527eb6d4e1
+      internalID: 949251107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_20
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 92
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e9b17e90786334ca0048ba2805e15b
+      internalID: -747903476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_21
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 92
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3353f5e37976b5448cb43387485fde1
+      internalID: 1867606121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_22
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 92
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68db44bed9868c43a6faae074432cdd
+      internalID: 1391633410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_23
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 92
+        width: 83
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d17b3df481fa945a7bf675e08843fa
+      internalID: -2011802886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slot-button_24
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1fcdf5b3de8af499ea7c3065a7a0e1
-      internalID: -422712335
+      spriteID: 3202c0bd84747724986a70b489dcfc29
+      internalID: -1986089254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_1
+      name: slot-button_25
       rect:
         serializedVersion: 2
         x: 83
@@ -145,659 +662,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33d06c3c26219bd4289a618defcea3a1
-      internalID: -886509015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6db1986b3213b46428795e4cd5e28655
-      internalID: -16732734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ee10ad3ae9505046ac4d1349ccd4e81
-      internalID: 2073918903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31d8f48ae8537a44e8fdeb7da8390856
-      internalID: 196756645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 781e1fa7e57e74045bb9b45ef4ee0940
-      internalID: -683528021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e27cc2758c34d154983b2d8446b11e75
-      internalID: -1395056217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 581
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58b792dfc301345489435a1aa3eb90cf
-      internalID: -352213769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 664
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d890dbb5c942b1641be8ca87246f6690
-      internalID: 1079623618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 747
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa94019e9a015bd4fa12e44185e6be2c
-      internalID: 381384145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 830
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c862f6b5c354f64c9a7a45b112113a8
-      internalID: -439069821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 913
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97d4de4db7c77f848a6dc3f038447a7f
-      internalID: 724499349
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 996
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fdb4880fc7a61943b54fd2f5c5b8e57
-      internalID: -334557600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 1079
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3db915fd0f492b3438fc7f4fc44c2567
-      internalID: -710236556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 1162
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3f9f30c95d917040af7f98b5a1addf2
-      internalID: -304674817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1245
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdee1ad664101614c92169120aa56954
-      internalID: -867536283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 1328
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d74cf8a880ae8149a462b2caf90a898
-      internalID: -94558086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 1411
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b02b794b52f96f04892f1c0252021c0d
-      internalID: 311090007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 1494
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe3d3b48f7d0acf48a1f6348320152d3
-      internalID: -1831709545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 1577
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2510afc6f40bc624b814e780c0bb01bc
-      internalID: -829575890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d6919a96b098c0409c6a4ce41880216
-      internalID: -1576266536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 1743
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43e0ab79ee0ba5b41b30844ef5a5803d
-      internalID: -952495352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 1826
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ccd5b044f2052de47a3cc239e0570d50
-      internalID: -1281593026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 1909
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e8cdf9918d5f9143a35b94a97840299
-      internalID: 1718713743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 1992
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c26b66bcc7439364e995834158f2baef
-      internalID: -1760567357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 2075
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f2b69079864204419ec509d72d4acef
-      internalID: 1798740172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 2158
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5de08e5f4ad491445b533efc0c37647b
-      internalID: 446952884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 2241
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e38722cad9f1d6f44b963f6d7d28c6a5
-      internalID: -1831098472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_28
-      rect:
-        serializedVersion: 2
-        x: 2324
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbd041f6b227fea4584554aa8d8bc47a
-      internalID: -1058541547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_29
-      rect:
-        serializedVersion: 2
-        x: 2407
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b94d4de26cba9d4a95de380b2659723
-      internalID: -1391386904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_30
-      rect:
-        serializedVersion: 2
-        x: 2490
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5277a3809e289654eb66caf106cd9720
-      internalID: 1515720510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_31
-      rect:
-        serializedVersion: 2
-        x: 2573
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 864c94d119d090d44ae3089e7a9f2742
-      internalID: 2027554954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metamorfarAnimacion-Sheet_32
-      rect:
-        serializedVersion: 2
-        x: 2656
-        y: 0
-        width: 83
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7e24e947e06da14b88dd88501665881
-      internalID: 199570643
+      spriteID: 744e1ec66e52d7d43b4815acb36f9021
+      internalID: -367119399
       vertices: []
       indices: 
       edges: []
@@ -813,39 +679,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      metamorfarAnimacion-Sheet_0: -422712335
-      metamorfarAnimacion-Sheet_1: -886509015
-      metamorfarAnimacion-Sheet_10: -439069821
-      metamorfarAnimacion-Sheet_11: 724499349
-      metamorfarAnimacion-Sheet_12: -334557600
-      metamorfarAnimacion-Sheet_13: -710236556
-      metamorfarAnimacion-Sheet_14: -304674817
-      metamorfarAnimacion-Sheet_15: -867536283
-      metamorfarAnimacion-Sheet_16: -94558086
-      metamorfarAnimacion-Sheet_17: 311090007
-      metamorfarAnimacion-Sheet_18: -1831709545
-      metamorfarAnimacion-Sheet_19: -829575890
-      metamorfarAnimacion-Sheet_2: -16732734
-      metamorfarAnimacion-Sheet_20: -1576266536
-      metamorfarAnimacion-Sheet_21: -952495352
-      metamorfarAnimacion-Sheet_22: -1281593026
-      metamorfarAnimacion-Sheet_23: 1718713743
-      metamorfarAnimacion-Sheet_24: -1760567357
-      metamorfarAnimacion-Sheet_25: 1798740172
-      metamorfarAnimacion-Sheet_26: 446952884
-      metamorfarAnimacion-Sheet_27: -1831098472
-      metamorfarAnimacion-Sheet_28: -1058541547
-      metamorfarAnimacion-Sheet_29: -1391386904
-      metamorfarAnimacion-Sheet_3: 2073918903
-      metamorfarAnimacion-Sheet_30: 1515720510
-      metamorfarAnimacion-Sheet_31: 2027554954
-      metamorfarAnimacion-Sheet_32: 199570643
-      metamorfarAnimacion-Sheet_4: 196756645
-      metamorfarAnimacion-Sheet_5: -683528021
-      metamorfarAnimacion-Sheet_6: -1395056217
-      metamorfarAnimacion-Sheet_7: -352213769
-      metamorfarAnimacion-Sheet_8: 1079623618
-      metamorfarAnimacion-Sheet_9: 381384145
+      slot-button_0: 1133624472
+      slot-button_1: 974017551
+      slot-button_10: 1833988576
+      slot-button_11: -445240834
+      slot-button_12: 1230193834
+      slot-button_13: -1299373576
+      slot-button_14: 1396351383
+      slot-button_15: -1733669451
+      slot-button_16: -1067605463
+      slot-button_17: 585250023
+      slot-button_18: 2109463864
+      slot-button_19: 949251107
+      slot-button_2: -1780419000
+      slot-button_20: -747903476
+      slot-button_21: 1867606121
+      slot-button_22: 1391633410
+      slot-button_23: -2011802886
+      slot-button_24: -1986089254
+      slot-button_25: -367119399
+      slot-button_3: -560771555
+      slot-button_4: 576228362
+      slot-button_5: 871913971
+      slot-button_6: -338619596
+      slot-button_7: 2125953540
+      slot-button_8: 691285759
+      slot-button_9: 3432511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SlotMachine : MonoBehaviour
@@ -26,15 +27,20 @@ public class SlotMachine : MonoBehaviour
     private SpriteRenderer _renderer;
     private Animator _animator;
     private Material _defaultMaterial;
+    private ParticleSystem _particles;
     private float _cooldownTimer;
-    private float _spinTimer;
+    private float _spinTimer, _spinDuration;
+    private Transform _selectedTarget;
+    private Image _triangle;
 
     private void Awake()
     {
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
+        _particles = GetComponentInChildren<ParticleSystem>();
         _defaultMaterial = _renderer.material;
         _selectedMaterial.SetTexture("_EmissiveTex", _defaultMaterial.mainTexture);
+        _triangle = GetComponentInChildren<Image>();
     }
 
     private void Update()
@@ -56,6 +62,7 @@ public class SlotMachine : MonoBehaviour
 
                 _spinTimer -= Time.deltaTime;
                 // transform.Rotate(0f, 0f, Time.deltaTime*50f);
+                _triangle.fillAmount = Mathf.Lerp(0f, 1f, _spinTimer / _spinDuration);
                 if (_spinTimer <= 0f)
                 {
                     transform.rotation = Quaternion.identity;
@@ -63,6 +70,7 @@ public class SlotMachine : MonoBehaviour
                     _animator.Play("Jackpot");
                     CurrentState = State.Disabled;
                     _cooldownTimer = _cooldown;
+                    _triangle.fillAmount = 0f;
                 }
                 
                 break;
@@ -113,21 +121,35 @@ public class SlotMachine : MonoBehaviour
 
         CurrentState = State.Targetted;
 
+        _selectedTarget = closest;
         return closest;
     }
 
     public void StartSpinning()
     {
         CurrentState = State.Spinning;
-        _spinTimer = Random.Range(_minSpinTime, _maxSpinTime);
+        _spinDuration = Random.Range(_minSpinTime, _maxSpinTime);
+        _spinTimer = _spinDuration;
         AudioManager.Instance.PlaySound(_slotSound);
         _animator.Play("Spinning");
+        _triangle.fillAmount = 1f;
     }
 
     public ulong CollectJackpot()
     {
         HasJackpot = false;
         AudioManager.Instance.PlaySound(_jackpotSound);
+        PlayParticles();
         return _jackpotMoney;
+    }
+
+    private void PlayParticles()
+    {
+        var particlesTransform = _particles.transform;
+        var direction = _selectedTarget.position - particlesTransform.position;
+        var angle = Vector3.SignedAngle(particlesTransform.up, direction.normalized, Vector3.forward);
+        particlesTransform.Rotate(0f, 0f, angle);
+        _particles.Play();
+
     }
 }
