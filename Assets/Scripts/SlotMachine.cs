@@ -24,6 +24,7 @@ public class SlotMachine : MonoBehaviour
     [SerializeField] private AudioClip _slotSound, _jackpotSound;
 
     private SpriteRenderer _renderer;
+    private Animator _animator;
     private Material _defaultMaterial;
     private float _cooldownTimer;
     private float _spinTimer;
@@ -31,6 +32,7 @@ public class SlotMachine : MonoBehaviour
     private void Awake()
     {
         _renderer = GetComponentInChildren<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
         _defaultMaterial = _renderer.material;
         _selectedMaterial.SetTexture("_EmissiveTex", _defaultMaterial.mainTexture);
     }
@@ -53,12 +55,13 @@ public class SlotMachine : MonoBehaviour
             case State.Spinning:
 
                 _spinTimer -= Time.deltaTime;
-                transform.Rotate(0f, 0f, Time.deltaTime*50f);
+                // transform.Rotate(0f, 0f, Time.deltaTime*50f);
                 if (_spinTimer <= 0f)
                 {
                     transform.rotation = Quaternion.identity;
                     Disable();
                     HasJackpot = true;
+                    _animator.Play("Jackpot");
                 }
                 
                 break;
@@ -119,6 +122,7 @@ public class SlotMachine : MonoBehaviour
         CurrentState = State.Spinning;
         _spinTimer = Random.Range(_minSpinTime, _maxSpinTime);
         AudioManager.Instance.PlaySound(_slotSound);
+        _animator.Play("Spinning");
     }
 
     public ulong CollectJackpot()
