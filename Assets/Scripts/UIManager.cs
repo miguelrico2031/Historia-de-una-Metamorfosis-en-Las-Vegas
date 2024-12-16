@@ -18,10 +18,12 @@ public class UIManager : MonoBehaviour
 
     [Header("Metamorphose")] [SerializeField]
     private Button _metamorphoseButton;
+
     [SerializeField] private Slider _metDurationSlider;
     [SerializeField] private float _metCooldownButtonDuration = 6f;
 
     [Header("GameOver")] [SerializeField] private Image _fadeOut;
+    [SerializeField] private AudioClip _gameOverSound;
 
     private ulong _money = 0;
     private ulong _displayedMoney = 0;
@@ -34,14 +36,8 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance is not null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
+        Instance = this;
+
 
         _moneyDelayPeriod = 1f / _moneySpeed;
         _moneyTimer = _moneyDelayPeriod;
@@ -64,17 +60,16 @@ public class UIManager : MonoBehaviour
         if (_money > _displayedMoney)
         {
             _moneyTimer -= Time.deltaTime;
-            if(_moneyTimer <= 0f)
+            if (_moneyTimer <= 0f)
             {
                 _moneyTimer = _moneyDelayPeriod;
                 _displayedMoney += 100;
                 UpdateMoney();
             }
         }
-        
-        if(Input.GetKeyDown(KeyCode.Space) && _metamorphoseButton.enabled)
+
+        if (Input.GetKeyDown(KeyCode.Space) && _metamorphoseButton.enabled)
             PressMetamorphoseButton();
-        
     }
 
     private void Start()
@@ -129,10 +124,9 @@ public class UIManager : MonoBehaviour
         PlayerPrefs.SetString("Score", _displayedMoney.ToString());
         _fadeOut.gameObject.SetActive(true);
         Time.timeScale = 0f;
-        
-        foreach(var drag in FindObjectsByType<DraggableUI>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        AudioManager.Instance.StopAllSounds();
+        AudioManager.Instance.PlaySound(_gameOverSound);
+        foreach (var drag in FindObjectsByType<DraggableUI>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             Destroy(drag.gameObject);
     }
-    
-    
 }

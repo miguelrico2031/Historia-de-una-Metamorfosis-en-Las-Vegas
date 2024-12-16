@@ -24,7 +24,7 @@ public class PlayerRandomizePosition : MonoBehaviour
             hit.position.y,
             transform.position.z);
         
-        
+        Debug.Log("pos rand");
         Camera.main.GetComponent<CameraFollow>().ForceLockTarget();
     }
 }

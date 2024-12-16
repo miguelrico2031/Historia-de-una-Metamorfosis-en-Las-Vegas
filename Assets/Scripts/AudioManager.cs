@@ -12,6 +12,13 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance is not null)
         {
+            if (Instance._music.clip != _music.clip)
+            {
+                Instance._music.clip = _music.clip;
+                Instance._music.Play();
+            }
+
+            Instance._music.volume = _music.volume;
             Destroy(gameObject);
             return;
         }
@@ -36,5 +43,10 @@ public class AudioManager : MonoBehaviour
     public void PlayMetamorphoseEndSound()
     {
         _sfx.PlayOneShot(_metamorphoseEnd);
+    }
+
+    public void StopAllSounds()
+    {
+        _sfx.Stop();
     }
 }
