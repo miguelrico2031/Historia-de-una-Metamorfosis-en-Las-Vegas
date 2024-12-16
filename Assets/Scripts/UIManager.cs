@@ -22,7 +22,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private float _metCooldownButtonDuration = 6f;
 
     [Header("GameOver")] [SerializeField] private Image _fadeOut;
-    [SerializeField] private float _fadeOutDuration;
 
     private ulong _money = 0;
     private ulong _displayedMoney = 0;
@@ -31,8 +30,7 @@ public class UIManager : MonoBehaviour
     private bool _isMet;
     private float _moneyDelayPeriod;
     private float _moneyTimer;
-    private bool _isFadingOut = false;
-    private float _fadeOutProgress;
+
 
     private void Awake()
     {
@@ -72,20 +70,6 @@ public class UIManager : MonoBehaviour
                 _displayedMoney += 100;
                 UpdateMoney();
             }
-        }
-
-        if (_isFadingOut)
-        {
-            _fadeOutProgress += Time.deltaTime / _fadeOutDuration;
-            var color = _fadeOut.color;
-            color.a = Mathf.Lerp(0f, 1f, _fadeOutProgress);
-            _fadeOut.color = color;
-            if (_fadeOutProgress >= 1f)
-            {
-                SceneManager.LoadScene("Game Over");
-            }
-
-            return;
         }
         
         if(Input.GetKeyDown(KeyCode.Space) && _metamorphoseButton.enabled)
@@ -143,7 +127,12 @@ public class UIManager : MonoBehaviour
     public void EndGame()
     {
         PlayerPrefs.SetString("Score", _displayedMoney.ToString());
-        _isFadingOut = true;
-        _fadeOutProgress = 0f;
+        _fadeOut.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+        
+        foreach(var drag in FindObjectsByType<DraggableUI>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            Destroy(drag.gameObject);
     }
+    
+    
 }

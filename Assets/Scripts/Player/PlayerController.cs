@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public APlayerState CurrentState { get; private set; }
+    public SlotMachine LastSlot;
     
     private void Start()
     {

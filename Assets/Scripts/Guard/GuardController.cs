@@ -18,7 +18,6 @@ public class GuardController : MonoBehaviour
     
     [SerializeField] private int _lastSlotTargetBufferSize = 3;
 
-    private static Transform _player;
     
     private SlotMachine[] _lastSlotTargetBuffer;
     private int _bufferIndex = 0;
@@ -27,15 +26,12 @@ public class GuardController : MonoBehaviour
     private void Awake()
     {
         Movement = GetComponent<GuardMovement>();
-        _lastSlotTargetBuffer = new SlotMachine[_lastSlotTargetBufferSize];
         SpriteTransform = transform.GetChild(0);
+        ClearBuffer();
     }
 
     private void Start()
     {
-        if (_player is null)
-            _player = GameObject.FindWithTag("Player").transform;
-
         SetState(new GuardSelectTarget(this));
     }
 
@@ -59,6 +55,8 @@ public class GuardController : MonoBehaviour
         CurrentState?.Begin(old);
     }
 
+    public PlayerController GetPlayer() => FindAnyObjectByType<PlayerController>();
+
 
 
     public bool IsInBuffer(SlotMachine slot)
@@ -70,5 +68,11 @@ public class GuardController : MonoBehaviour
     {
         _lastSlotTargetBuffer[_bufferIndex] = slot;
         _bufferIndex = (_bufferIndex + 1) % _lastSlotTargetBufferSize;
+    }
+
+    public void ClearBuffer()
+    {
+        _bufferIndex = 0;
+        _lastSlotTargetBuffer = new SlotMachine[_lastSlotTargetBufferSize];
     }
 }

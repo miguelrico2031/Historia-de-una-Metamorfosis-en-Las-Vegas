@@ -8,7 +8,6 @@ public class SlotMachine : MonoBehaviour
     public enum State
     {
         Enabled,
-        Targetted,
         Spinning,
         Disabled
     }
@@ -79,7 +78,7 @@ public class SlotMachine : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (CurrentState is State.Enabled or State.Targetted)
+        if (CurrentState is State.Enabled)
         {
             _renderer.material = _selectedMaterial;
         }
@@ -87,7 +86,7 @@ public class SlotMachine : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (CurrentState is State.Enabled or State.Spinning or State.Targetted && _renderer.material != _defaultMaterial)
+        if (CurrentState is State.Enabled or State.Spinning && _renderer.material != _defaultMaterial)
             _renderer.material = _defaultMaterial;
 
         else if (CurrentState is State.Disabled && _renderer.material != _disabledMaterial)
@@ -124,7 +123,6 @@ public class SlotMachine : MonoBehaviour
     public void PlayerTarget(Transform selectedTarget)
     {
         _selectedTarget = selectedTarget;
-        CurrentState = State.Targetted;
     }
 
     public void StartSpinning()

@@ -5428,7 +5428,7 @@ MonoBehaviour:
   - {fileID: 5032624173082282634}
   _selectedMaterial: {fileID: 2100000, guid: e406e93f316813b4ea774cc659ffb798, type: 2}
   _disabledMaterial: {fileID: 2100000, guid: cb8a6c5c3067ab44fb59eae8900b2783, type: 2}
-  _cooldown: 20
+  _cooldown: 45
   _minSpinTime: 3
   _maxSpinTime: 6
   _minJackpotMoney: 100000

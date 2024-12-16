@@ -84,12 +84,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69feaa747c834e4fa3be4e51b2b6ddc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetRange: 5.5
+  TargetRange: 8
   TargetLayers:
     serializedVersion: 2
     m_Bits: 128
   LookAroundRotSpeed: 55
-  _lastSlotTargetBufferSize: 3
+  _lastSlotTargetBufferSize: 7
 --- !u!1 &6399567047241643299
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,14 +221,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.094646305, y: 1.2018168}
-      - {x: 0.0946463, y: 1.2125239}
-      - {x: 1.0343472, y: -0.8270899}
-      - {x: 0.6880441, y: -1.0652977}
-      - {x: 0.29398227, y: -1.1703005}
-      - {x: -0.27718747, y: -1.1877928}
-      - {x: -0.6852225, y: -1.0872912}
-      - {x: -1.0397012, y: -0.83244336}
+    - - {x: -0.01340875, y: 1.1125057}
+      - {x: 0.011227213, y: 1.114953}
+      - {x: 0.8404784, y: -0.6996962}
+      - {x: 0.6021284, y: -0.80290663}
+      - {x: 0.20110011, y: -0.8614683}
+      - {x: -0.23539078, y: -0.860384}
+      - {x: -0.56912005, y: -0.8109679}
+      - {x: -0.87715745, y: -0.71169674}
   m_UseDelaunayMesh: 0
 --- !u!50 &4409303212322480737
 Rigidbody2D:

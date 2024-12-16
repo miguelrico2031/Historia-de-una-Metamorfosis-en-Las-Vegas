@@ -18,11 +18,10 @@ public class GuardSelectTarget : AGuardState
 
         if (count == 0)
         {
-            SelectRandomPointAsTarget();
+            SelectPlayerSlotAsTarget();
             return;
         }
 
-        Collider2D selected = null;
         SlotMachine slot;
 
         List<SlotMachine> notInBufferTargets = new();
@@ -35,7 +34,7 @@ public class GuardSelectTarget : AGuardState
 
         if (!notInBufferTargets.Any())
         {
-            SelectRandomPointAsTarget();
+            SelectPlayerSlotAsTarget();
             return;
         }
 
@@ -47,13 +46,19 @@ public class GuardSelectTarget : AGuardState
         StartMovement();
     }
 
-    private void SelectRandomPointAsTarget()
+    private void SelectPlayerSlotAsTarget()
     {
-        var pos = _controller.transform.position + _controller.TargetRange * 1.5f * (Vector3)Random.insideUnitCircle;
+        // var pos = _controller.transform.position + _controller.TargetRange * 1.5f * (Vector3)Random.insideUnitCircle;
+        //
+        // NavMesh.SamplePosition(pos, out var hit, .3f, NavMesh.AllAreas);
+        // _target = hit.position;
+        // _slotTarget = null;
+        var player = _controller.GetPlayer();
+        _slotTarget = player.LastSlot;
 
-        NavMesh.SamplePosition(pos, out var hit, .3f, NavMesh.AllAreas);
-        _target = hit.position;
-        _slotTarget = null;
+        _controller.ClearBuffer();
+        _controller.AddToBuffer(_slotTarget);
+        _target = _slotTarget.GetClosestTarget(_controller.transform.position).position;
         StartMovement();
     }
 

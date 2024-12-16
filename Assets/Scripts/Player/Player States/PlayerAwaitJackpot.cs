@@ -15,6 +15,7 @@ public class PlayerAwaitJackpot : APlayerState
         _slot.StartSpinning();
         _movement = _controller.GetComponent<PlayerMovement>();
         _direction = _movement.GetDirectionTo(_slot.transform.position);
+        _controller.LastSlot = _slot;
     }
 
     public override void Update(float deltaTime)

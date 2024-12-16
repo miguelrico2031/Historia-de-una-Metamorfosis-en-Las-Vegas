@@ -18,4 +18,9 @@ public class CameraFollow : MonoBehaviour
         Vector3 targetpos = _target.position + _offset;
         transform.position = Vector3.MoveTowards(transform.position, targetpos, _speed * Time.deltaTime);
     }
+
+    public void ForceLockTarget()
+    {
+        transform.position = new Vector3(_target.position.x, _target.position.y, transform.position.z);
+    }
 }

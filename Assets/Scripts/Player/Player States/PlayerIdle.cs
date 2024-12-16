@@ -10,9 +10,6 @@ public class PlayerIdle : APlayerState
     {
         SlotMachineManager.Instance.OnSlotClicked += OnSlotClicked;
     }
-    public override void Update(float deltaTime) {}
-    public override void Exit(APlayerState nextState = null) {}
-
 
     private void OnSlotClicked(SlotMachine slot)
     {
