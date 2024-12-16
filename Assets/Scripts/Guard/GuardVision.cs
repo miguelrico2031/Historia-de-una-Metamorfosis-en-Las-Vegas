@@ -8,8 +8,11 @@ public class GuardVision : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (other.GetComponent<PlayerMetamorphose>().IsBug) return;
             Debug.Log("PERDISTE JEJ");
-            Debug.Break();
+            UIManager.Instance.EndGame();
+            GetComponentInParent<GuardMovement>().CancelMovement();
+            other.GetComponent<PlayerMovement>().CancelMovement();
         }
     }
 }

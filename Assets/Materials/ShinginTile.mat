@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player Human
+  m_Name: ShinginTile
   m_Shader: {fileID: -6465566751694194690, guid: 796345fe81f43974093f338551c53575, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -60,6 +60,6 @@ Material:
     m_Floats:
     - _AlphaAdd: 356.9
     m_Colors:
-    - _Color: {r: 1.7814789, g: 1.7814789, b: 1.7814789, a: 1}
+    - _Color: {r: 3.175369, g: 3.175369, b: 3.175369, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

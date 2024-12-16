@@ -36,11 +36,12 @@ public class PlayerMetamorphose : MonoBehaviour
         if (IsBug) throw new Exception("intentando metamorphosear siendo una cucaracha!");
 
         IsBug = true;
-        _movement.SetBug();
         _metamorphoseTimer = MetamorphoseDuration;
         OnMetamorphose?.Invoke(true);
         _human.SetActive(false);
         _bug.SetActive(true);
+        _bug.GetComponent<Animator>().Play("Metamorphose");
+        _movement.SetBug();
         AudioManager.Instance.PlayMetamorphoseBeginSound();
     }
 
@@ -49,10 +50,11 @@ public class PlayerMetamorphose : MonoBehaviour
         if (!IsBug) throw new Exception("intentando demetamorphosear siendo un man!");
 
         IsBug = false;
-        _movement.SetHuman();
         OnMetamorphose?.Invoke(false);
-        _human.SetActive(true);
         _bug.SetActive(false);
+        _human.SetActive(true);
+        _human.GetComponent<Animator>().Play("Metamorphose");
+        _movement.SetHuman();
         AudioManager.Instance.PlayMetamorphoseEndSound();
     }
 }
